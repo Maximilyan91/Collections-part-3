@@ -31,6 +31,7 @@ public class Main {
      //   System.out.println(Arrays.toString(drivers.toArray()));
 
         Car car1 = new Car("Car brand 1", "model 1", 1.0, driverB1, Car.BodyType.COUPE);
+        Car car2 = new Car("Car brand 1", "model 1", 1.0, driverB1, Car.BodyType.COUPE);
 //        Car car2 = new Car("Car brand 2", "model 2", 2.0, new DriverB("DriverB2",true, 1), Car.BodyType.SEDAN);
 //        Car car3 = new Car("Car brand 3", "model 3", 3.0, new DriverB("DriverB3",true, 1), Car.BodyType.HATCHBACK);
 //        Car car4 = new Car("Car brand 4", "model 4", 4.0, new DriverB("DriverB4",true, 1), Car.BodyType.PICKUP);
@@ -49,11 +50,11 @@ public class Main {
 
         Map<Transport, Driver> automechanics = new HashMap<>();
         automechanics.put(car1, driverB1);
-        automechanics.put(car1, driverB1);
-        automechanics.put(car1, driverB2);
-        automechanics.put(car1, driverB);
-        automechanics.put(bus1, driverB1);
-        automechanics.put(truck1, driverB1);
+        automechanics.put(car2, driverB1);
+//        automechanics.put(car1, driverB2);
+//        automechanics.put(car1, driverB);
+//        automechanics.put(bus1, driverB1);
+//        automechanics.put(truck1, driverB1);
         System.out.printf(String.valueOf(automechanics));
 
 
