@@ -4,11 +4,11 @@ import Drivers.DriverC;
 import Drivers.DriverD;
 import Transport.Bus;
 import Transport.Car;
+import Transport.Transport;
 import Transport.Truck;
+import Mechanic.Mechanics;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,7 +16,7 @@ public class Main {
         DriverC driverC1 = new DriverC("DriverC1", true, 3);
         DriverD driverD1 = new DriverD("DriverD1", true, 5);
         DriverB driverB2 = new DriverB("DriverB1", true, 1);
-
+        DriverB driverB = new DriverB("DriverB3", true, 4);
 
         Set<Driver> drivers = new HashSet<>();
         drivers.add(driverB1);
@@ -28,9 +28,10 @@ public class Main {
         drivers.add(driverD1);
         drivers.add(driverD1);
 
-        System.out.println(Arrays.toString(drivers.toArray()));
+     //   System.out.println(Arrays.toString(drivers.toArray()));
 
         Car car1 = new Car("Car brand 1", "model 1", 1.0, driverB1, Car.BodyType.COUPE);
+        Car car2 = new Car("Car brand 1", "model 1", 1.0, driverB1, Car.BodyType.COUPE);
 //        Car car2 = new Car("Car brand 2", "model 2", 2.0, new DriverB("DriverB2",true, 1), Car.BodyType.SEDAN);
 //        Car car3 = new Car("Car brand 3", "model 3", 3.0, new DriverB("DriverB3",true, 1), Car.BodyType.HATCHBACK);
 //        Car car4 = new Car("Car brand 4", "model 4", 4.0, new DriverB("DriverB4",true, 1), Car.BodyType.PICKUP);
@@ -45,7 +46,17 @@ public class Main {
 //        Truck truck3 = new Truck("Truck brand 3", "Truck model 3", 3.0, new DriverC("DriverC3", true, 7), null);
 //        Truck truck4 = new Truck("Truck brand 4", "Truck model 4", 4.0, new DriverC("DriverC4", true, 7), null);
 
-        DriverB driverB = new DriverB("DriverB1", false, 1);
+
+
+        Map<Transport, Driver> automechanics = new HashMap<>();
+        automechanics.put(car1, driverB1);
+        automechanics.put(car2, driverB1);
+//        automechanics.put(car1, driverB2);
+//        automechanics.put(car1, driverB);
+//        automechanics.put(bus1, driverB1);
+//        automechanics.put(truck1, driverB1);
+        System.out.printf(String.valueOf(automechanics));
+
 
 //        List<Transport> allracingCars = new ArrayList<>();
 
@@ -69,7 +80,7 @@ public class Main {
 //        mech1.doService();
 //
 //        for (Transport<?> transport : allracingCars) {
-//            System.out.println(transport + " " + transport.getModel() + " " + transport.getDriver() + transport.getMechanics());
+//            System.out.println(transport + " " + transport.getModel() + " " + transport.getDriver() + transport.getAutomechanics());
 //        }
 //
 //        ServiceStation serviceStation = new ServiceStation();
