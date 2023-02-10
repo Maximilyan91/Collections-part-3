@@ -1,8 +1,14 @@
 package Mechanic;
 
 
-public class Mechanics {
+import Drivers.Driver;
+import Transport.Transport;
 
+import java.util.HashMap;
+import java.util.Map;
+
+public class Mechanics {
+    private static Map<Transport, Driver> automechanics = new HashMap<>();
     private String name;
     private String surName;
     private String workCompany;
@@ -26,7 +32,9 @@ public class Mechanics {
                 "Работающий в компании - " + getWorkCompany() + " ремонтирует автомобиль");
     }
 
-
+    public static Map<Transport, Driver> getAutomechanics() {
+        return automechanics;
+    }
     public String getName() {
         return name;
     }
