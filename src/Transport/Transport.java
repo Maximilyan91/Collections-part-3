@@ -86,7 +86,6 @@ public abstract class Transport<T extends Driver> implements Racing {
         }
 
     }
-
     public ArrayList<Mechanics> getMechanics() {
         return mechanics;
     }

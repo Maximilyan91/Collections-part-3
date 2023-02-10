@@ -47,7 +47,6 @@ public class Main {
 //        Truck truck4 = new Truck("Truck brand 4", "Truck model 4", 4.0, new DriverC("DriverC4", true, 7), null);
 
 
-
         Map<Transport, Driver> automechanics = new HashMap<>();
         automechanics.put(car1, driverB1);
         automechanics.put(car2, driverB1);
